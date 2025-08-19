@@ -1,0 +1,30 @@
+interface ProfileSectionProps {
+  profileImage?: string;
+  nickname: string;
+}
+
+export function ProfileSection({
+  profileImage,
+  nickname,
+}: ProfileSectionProps) {
+  return (
+    <div className="flex flex-col items-center mb-8">
+      <div className="w-20 h-20 rounded-full overflow-hidden mb-4 shadow-lg">
+        {profileImage ? (
+          <img
+            src={profileImage}
+            alt="프로필"
+            className="w-full h-full object-cover"
+          />
+        ) : (
+          <div className="w-full h-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+            <span className="text-white text-2xl font-bold">
+              {nickname.charAt(0).toUpperCase()}
+            </span>
+          </div>
+        )}
+      </div>
+      <h2 className="text-xl font-semibold text-gray-800">{nickname}</h2>
+    </div>
+  );
+}

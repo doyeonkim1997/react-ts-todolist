@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- 메인 배경 - 더 작은 둥근 모서리 -->
+  <rect width="32" height="32" rx="4" fill="#3b82f6"/>
+  
+  <!-- 큰 체크마크 - 더 굵고 명확하게 -->
+  <path d="M8 16 L13 21 L24 10" 
+        stroke="white" 
+        stroke-width="3" 
+        fill="none" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+  
+  <!-- 체크마크를 더 돋보이게 하는 그림자 효과 -->
+  <path d="M8 16 L13 21 L24 10" 
+        stroke="rgba(255,255,255,0.3)" 
+        stroke-width="5" 
+        fill="none" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+</svg>
