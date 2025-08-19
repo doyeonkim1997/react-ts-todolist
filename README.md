@@ -42,7 +42,7 @@ npm run build
 
 ## 📱 스크린샷
 
-![TodoList Screenshot](screenshot.png)
+![TodoList 스크린샷](https://github.com/user-attachments/assets/e4e2e07e-edee-42c7-b2b2-0f856664f6b6)
 
 ## 🔧 사용법
 
