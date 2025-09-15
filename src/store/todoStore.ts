@@ -18,6 +18,10 @@ interface TodoState {
   filter: Filter;
   setFilter: (filter: Filter) => void;
 
+  // 다크 모드 상태 추가
+  isDarkmode: boolean;
+  toggleDarkMode: () => void;
+
   addTodo: (date: Date, text: string) => void;
   toggleTodo: (date: Date, id: string) => void;
   deleteTodo: (date: Date, id: string) => void;
@@ -33,6 +37,10 @@ export const useTodoStore = create(
       todos: [],
       filter: "all",
       setFilter: (filter) => set({ filter }),
+
+      // 다크 모드 상태 관리 추가
+      isDarkMode: false,
+      toggleDarkMode: () => set((state) => ({ isDarkMode: !state.isDarkMode })),
 
       addTodo: (date, text) =>
         set((state) => ({

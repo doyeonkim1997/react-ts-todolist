@@ -29,7 +29,12 @@ export function TodoForm({ onAdd }: TodoFormProps) {
             value={text}
             onChange={(e) => setText(e.target.value)}
             placeholder="어떤 일을 하실 건가요? ✨"
-            className="flex-1 px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-gray-50 placeholder-gray-400"
+            className="
+                      flex-1 px-4 py-3 border border-gray-200 rounded-xl 
+                      focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
+                      bg-gray-50 placeholder-gray-400
+                      dark:bg-slate-700 dark:border-slate-600 dark:text-gray-100 dark:placeholder-gray-400
+                      transition-colors duration-300"
           />
           <button
             type="submit"

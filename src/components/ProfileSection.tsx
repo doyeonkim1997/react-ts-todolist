@@ -17,14 +17,22 @@ export function ProfileSection({
             className="w-full h-full object-cover"
           />
         ) : (
-          <div className="w-full h-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+          <div
+            className="
+          w-full h-full flex items-center justify-center
+          bg-gradient-to-br from-blue-400 to-blue-600
+          dark:from-blue-600 dark:to-blue-800
+          transition-colors duration-300"
+          >
             <span className="text-white text-2xl font-bold">
               {nickname.charAt(0).toUpperCase()}
             </span>
           </div>
         )}
       </div>
-      <h2 className="text-xl font-semibold text-gray-800">{nickname}</h2>
+      <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100 transition-colors duration-300">
+        {nickname}
+      </h2>
     </div>
   );
 }

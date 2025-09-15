@@ -24,14 +24,17 @@ export function DateSlider({ selectedDate, onDateSelect }: DateSliderProps) {
       "flex flex-col items-center justify-center w-20 h-20 rounded-xl transition-all duration-300 transform hover:scale-105";
 
     if (isSameDate(date, selectedDate)) {
-      return `${baseStyle} bg-blue-600 text-white shadow-lg scale-105`;
+      return `${baseStyle} bg-blue-600 text-white shadow-lg scale-105
+                        dark:bg-blue-500 dark:text-white`;
     }
 
     if (isToday(date)) {
-      return `${baseStyle} bg-blue-100 text-blue-600 border-2 border-blue-300`;
+      return `${baseStyle} bg-blue-100 text-blue-600 border-2 border-blue-300
+                        dark:bg-slate-700 dark:text-blue-400 dark:border-blue-500`;
     }
 
-    return `${baseStyle} bg-gray-100 text-gray-600 hover:bg-gray-200`;
+    return `${baseStyle} bg-white text-gray-600 hover:bg-gray-100
+                      dark:bg-slate-700 dark:text-gray-300 dark:hover:bg-slate-600`;
   };
 
   const goToPreviousDay = () => {
@@ -48,7 +51,10 @@ export function DateSlider({ selectedDate, onDateSelect }: DateSliderProps) {
         <div className="flex items-center justify-between">
           <button
             onClick={goToPreviousDay}
-            className="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-gray-800 transition-colors"
+            className="p-2 rounded-lg 
+                      bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-gray-800
+                      dark:bg-slate-700 dark:hover:bg-slate-600 dark:text-gray-300 dark:hover:text-gray-100
+                      transition-colors duration-300"
             aria-label="이전 날짜"
           >
             <svg
@@ -72,7 +78,9 @@ export function DateSlider({ selectedDate, onDateSelect }: DateSliderProps) {
 
           <button
             onClick={goToNextDay}
-            className="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-gray-800 transition-colors"
+            className="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-gray-800
+            dark:bg-slate-700 dark:hover:bg-slate-600 dark:text-gray-300 dark:hover:text-gray-100
+            transition-colors duration-300"
             aria-label="다음 날짜"
           >
             <svg

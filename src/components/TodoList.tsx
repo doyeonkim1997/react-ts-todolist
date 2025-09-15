@@ -15,28 +15,29 @@ export function TodoList({ todos, onToggle, onDelete, onEdit }: TodoListProps) {
     return (
       <div className="text-center py-12">
         <div className="text-6xl mb-4">📝</div>
-        <p className="text-gray-400">아직 할 일이 없습니다</p>
+        <p className="text-gray-400 dark:text-gray-500 transition-colors duration-300">
+          아직 할 일이 없습니다.
+        </p>
       </div>
     );
   }
 
   return (
-    <div>
-      <div className="space-y-3">
-        {todos.map((todo) => (
-          <TodoItem
-            key={todo.id}
-            todo={todo}
-            onToggle={onToggle}
-            onDelete={onDelete}
-            onEdit={onEdit}
-          />
-        ))}
-      </div>
-
+    <div className="space-y-3">
+      {" "}
+      {/* ✅ 배경색/스크롤 빼고 여백만 유지 */}
+      {todos.map((todo) => (
+        <TodoItem
+          key={todo.id}
+          todo={todo}
+          onToggle={onToggle}
+          onDelete={onDelete}
+          onEdit={onEdit}
+        />
+      ))}
       {completedCount > 0 && (
         <div className="mt-6 text-center">
-          <div className="text-sm text-gray-400">
+          <div className="text-sm text-gray-400 dark:text-gray-500">
             🎉 {completedCount}개의 할 일을 완료했습니다!
           </div>
         </div>

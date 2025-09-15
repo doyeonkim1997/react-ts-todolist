@@ -46,7 +46,13 @@ export function TodoItem({ todo, onToggle, onDelete, onEdit }: TodoItemProps) {
   };
 
   return (
-    <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm border border-gray-100">
+    <div
+      className="flex items-center gap-3 p-4 
+                    bg-white dark:bg-slate-700
+                    rounded-xl shadow-sm 
+                    border border-gray-100 dark:border-slate-600
+                    transition-colors duration-300"
+    >
       <div className="relative">
         <input
           type="checkbox"
@@ -95,7 +101,9 @@ export function TodoItem({ todo, onToggle, onDelete, onEdit }: TodoItemProps) {
         // 일반 모드
         <span
           className={`flex-1 ${
-            todo.completed ? "line-through text-gray-400" : "text-gray-800"
+            todo.completed
+              ? "line-through text-gray-400 dark:text-gray-500"
+              : "text-gray-800 dark:text-gray-100"
           }`}
         >
           {todo.text}
