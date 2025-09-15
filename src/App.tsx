@@ -54,12 +54,12 @@ function App() {
               bg-white dark:bg-slate-800
               rounded-2xl shadow-lg overflow-hidden
               transition-colors duration-300
-              max-h-[70vh] sm:h-[600px] md:h-[550px] 
+              max-h-[70vh] sm:h-[600px] md:h-[700px] 
               flex flex-col
             "
           >
             {/* 진행도 바 + 입력폼 */}
-            <div className="p-6 pb-0">
+            <div className="p-6 pb-0 flex-shrink-0">
               <ProgressBar
                 completed={
                   getTodosForDate(selectedDate).filter((todo) => todo.completed)
@@ -75,7 +75,7 @@ function App() {
             </div>
 
             {/* 리스트 영역 */}
-            <div className="flex-1 px-6 pb-6">
+            <div className="flex-1 overflow-y-auto px-6 pb-6">
               <TodoList
                 todos={getTodosForDate(selectedDate)}
                 onToggle={(id) => toggleTodo(selectedDate, id)}
