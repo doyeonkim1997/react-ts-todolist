@@ -1,4 +1,4 @@
-# TodoList 📝
+# ToDoit! 할 일 관리 앱 📝
 
 ![TodoList 라이트 모드 스크린샷](https://github.com/user-attachments/assets/2d443f6a-6d73-4427-bc5e-845583232263)
 ![TodoList 다크 모드 스크린샷](https://github.com/user-attachments/assets/83ff3201-4bda-4947-aa2e-48156de3a07c)
