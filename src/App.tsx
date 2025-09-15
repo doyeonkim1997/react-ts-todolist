@@ -54,7 +54,7 @@ function App() {
               bg-white dark:bg-slate-800
               rounded-2xl shadow-lg overflow-hidden
               transition-colors duration-300
-              h-[500px] sm:h-[600px] md:h-[700px] 
+              max-h-[70vh] sm:h-[600px] md:h-[550px] 
               flex flex-col
             "
           >
