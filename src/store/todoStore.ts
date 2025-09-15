@@ -19,7 +19,7 @@ interface TodoState {
   setFilter: (filter: Filter) => void;
 
   // 다크 모드 상태 추가
-  isDarkmode: boolean;
+  isDarkMode: boolean;
   toggleDarkMode: () => void;
 
   addTodo: (date: Date, text: string) => void;

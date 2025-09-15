@@ -3,7 +3,7 @@ export interface Todo {
   text: string;
   completed: boolean;
   date: string; // YYYY-MM-DD 형식
-  createdAt: Date;
+  createdAt?: Date;
 }
 
 export type TodoFilter = "all" | "active" | "completed";
