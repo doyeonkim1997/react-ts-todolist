@@ -1,5 +1,7 @@
 # TodoList 📝
 
+![TodoList 스크린샷](https://github.com/user-attachments/assets/e4e2e07e-edee-42c7-b2b2-0f856664f6b6)
+
 React + TypeScript로 만든 모던한 할 일 관리 애플리케이션입니다.
 
 ## 주요 기능
@@ -39,10 +41,6 @@ npm run build
 - **TypeScript 5.8.3** - 타입 안정성 보장
 - **Vite 7.1.0** - 빠른 개발 환경
 - **Tailwind CSS 3.4.17** - 모던한 UI 디자인
-
-## 📱 스크린샷
-
-![TodoList Screenshot](screenshot.png)
 
 ## 🔧 사용법
 
