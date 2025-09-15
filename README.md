@@ -4,12 +4,13 @@
 ![TodoList 다크 모드 스크린샷](https://github.com/user-attachments/assets/83ff3201-4bda-4947-aa2e-48156de3a07c)
 
 <p align="center">
-  <a href="https://your-deploy-link.vercel.app/">
-    <img src="https://img.shields.io/badge/Visit_App-Click_Here-blue?style=for-the-badge&logo=vercel" alt="배포 링크" />
+  <a href="https://react-ts-todolist-plum.vercel.app/">
+    <img src="https://img.shields.io/badge/Visit_App-Click_Here-blue?style=for-the-badge&logo=vercel" alt="https://react-ts-todolist-plum.vercel.app/" />
   </a>
 </p>
+
 > 오늘을 파란빛으로 기록하고 내일의 성장을 이어가는, 직관적인 투두리스트 앱입니다. 🌊  
-> React와 TypeScript로 구축했으며, Zustand 상태 관리를 통해 가볍고 직관적인 경험을 제공합니다.
+> React와 TypeScript로 개발했으며, Zustand 상태 관리를 통해 가볍고 직관적인 경험을 제공합니다.
 
 ## 주요 기능
 
