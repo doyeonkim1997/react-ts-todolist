@@ -26,15 +26,17 @@ function App() {
   } = useTodoStore();
 
   return (
-    <div
-      className="
+    <div className={isDarkMode ? "dark min-h-screen" : "min-h-screen"}>
+      <div
+        className="
     min-h-screen
     bg-gradient-to-br from-blue-50 to-indigo-100
     dark:from-gray-900 dark:to-gray-800
     flex flex-col
-  "
-    >
+    "
+      ></div>
       {/* 상단 고정 */}
+
       <div className="w-full max-w-xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex-shrink-0">
         <ProfileSection
           profileImage={DEFAULT_USER_PROFILE.profileImage}
