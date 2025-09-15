@@ -21,7 +21,7 @@ export function DateSlider({ selectedDate, onDateSelect }: DateSliderProps) {
 
   const getDateButtonStyle = (date: Date): string => {
     const baseStyle =
-      "flex flex-col items-center justify-center w-20 h-20 rounded-xl transition-all duration-300 transform hover:scale-105";
+      "flex flex-col items-center justify-center w-12 h-12 sm:w-20 sm:h-20 rounded-xl transition-all duration-300 transform hover:scale-105";
 
     if (isSameDate(date, selectedDate)) {
       return `${baseStyle} bg-blue-600 text-white shadow-lg scale-105
@@ -109,10 +109,12 @@ export function DateSlider({ selectedDate, onDateSelect }: DateSliderProps) {
               className={getDateButtonStyle(date)}
               aria-label={`${date.getMonth() + 1}월 ${date.getDate()}일 선택`}
             >
-              <span className="text-sm font-medium mb-1">
+              <span className="text-xs sm:text-sm font-medium mt-1 sm:mt-0">
                 {getDayOfWeek(date)}
               </span>
-              <span className="text-xl font-bold">{date.getDate()}</span>
+              <span className="text-lg sm:text-xl font-bold">
+                {date.getDate()}
+              </span>
             </button>
           ))}
         </div>

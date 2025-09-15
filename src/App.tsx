@@ -35,7 +35,7 @@ function App() {
           flex items-center justify-center
         "
       >
-        <div className="w-full max-w-xl px-4">
+        <div className="w-full max-w-xl px-4 sm:px-6">
           {/* 프로필 섹션 */}
           <ProfileSection
             profileImage={DEFAULT_USER_PROFILE.profileImage}
@@ -54,7 +54,8 @@ function App() {
               bg-white dark:bg-slate-800
               rounded-2xl shadow-lg overflow-hidden
               transition-colors duration-300
-              h-[600px] flex flex-col
+              h-[500px] sm:h-[600px] md:h-[700px] 
+              flex flex-col
             "
           >
             {/* 진행도 바 + 입력폼 */}
@@ -67,6 +68,10 @@ function App() {
                 total={getTodosForDate(selectedDate).length}
               />
               <TodoForm onAdd={(text) => addTodo(selectedDate, text)} />
+              {/* 간격 확보*/}
+              <div className="mb-4">
+                <div className="h-4"></div>
+              </div>
             </div>
 
             {/* 리스트 영역 */}

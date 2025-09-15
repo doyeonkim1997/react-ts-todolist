@@ -30,7 +30,7 @@ export function ProfileSection({
           </div>
         )}
       </div>
-      <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100 transition-colors duration-300">
+      <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-800 dark:text-gray-100 transition-colors duration-300">
         {nickname}
       </h2>
     </div>

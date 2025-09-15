@@ -5,7 +5,7 @@ export function ContactFAB() {
         href="https://github.com/doyeonkim1997/"
         target="_blank"
         rel="noopener noreferrer"
-        className="group w-14 h-14 bg-blue-600 hover:bg-blue-700 rounded-full shadow-lg flex items-center justify-center text-white transition-all duration-300 transform hover:scale-105"
+        className="hidden sm:flex group w-14 h-14 bg-blue-600 hover:bg-blue-700 rounded-full shadow-lg flex items-center justify-center text-white transition-all duration-300 transform hover:scale-105"
         aria-label="GitHub으로 이동"
       >
         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
