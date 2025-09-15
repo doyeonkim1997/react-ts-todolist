@@ -46,7 +46,7 @@ export function DateSlider({ selectedDate, onDateSelect }: DateSliderProps) {
   };
 
   return (
-    <div className="mb-8">
+    <div className="mb-4 sm:mb-8">
       <div className="mb-4 px-6">
         <div className="flex items-center justify-between">
           <button
@@ -100,7 +100,7 @@ export function DateSlider({ selectedDate, onDateSelect }: DateSliderProps) {
         </div>
       </div>
 
-      <div className="px-6 py-2">
+      <div className="px-6 py-1 sm:py-2">
         <div className="flex justify-center gap-2">
           {dates.map((date, index) => (
             <button
@@ -109,10 +109,10 @@ export function DateSlider({ selectedDate, onDateSelect }: DateSliderProps) {
               className={getDateButtonStyle(date)}
               aria-label={`${date.getMonth() + 1}월 ${date.getDate()}일 선택`}
             >
-              <span className="text-xs sm:text-sm font-medium mt-1 sm:mt-0">
+              <span className="text-[10px] sm:text-xs font-medium mt-1 sm:mt-0">
                 {getDayOfWeek(date)}
               </span>
-              <span className="text-lg sm:text-xl font-bold">
+              <span className="text-base sm:text-xl font-bold">
                 {date.getDate()}
               </span>
             </button>
