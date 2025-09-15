@@ -35,7 +35,7 @@ function App() {
           flex items-center justify-center
         "
       >
-        <div className="w-full max-w-xl px-4 sm:px-6">
+        <div className="w-full max-w-xl px-4 sm:px- 6 lg:px-8 py-8">
           {/* 프로필 섹션 */}
           <ProfileSection
             profileImage={DEFAULT_USER_PROFILE.profileImage}
@@ -54,7 +54,7 @@ function App() {
               bg-white dark:bg-slate-800
               rounded-2xl shadow-lg overflow-hidden
               transition-colors duration-300
-              max-h-[70vh] sm:h-[600px] md:h-[700px] 
+              max-h-[70vh] sm:h-[600px] md:h-[500px] 
               flex flex-col
             "
           >
@@ -86,7 +86,7 @@ function App() {
           </div>
 
           {/* 하단 컨트롤 */}
-          <div className="h-8"></div>
+          <div className="h-3"></div>
           <div className="flex gap-2 justify-end">
             <DarkModeToggle />
             <ContactFAB />

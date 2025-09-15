@@ -20,7 +20,7 @@ export function TodoForm({ onAdd }: TodoFormProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex gap-2 sm:gap-3">
+    <form onSubmit={handleSubmit} className="flex gap-2 sm:gap-3 w-full">
       {/* 입력창 */}
       <input
         type="text"
@@ -28,7 +28,8 @@ export function TodoForm({ onAdd }: TodoFormProps) {
         onChange={(e) => setText(e.target.value)}
         placeholder="어떤 일을 하실 건가요? ✨"
         className="
-          flex-1 px-3 py-2 sm:px-4 sm:py-3
+          flex-1 min-w-0
+          px-3 py-2 sm:px-4 sm:py-3
           border border-gray-200 dark:border-slate-500
           rounded-xl
           focus:outline-none focus:ring-2 focus:ring-blue-500
@@ -43,6 +44,7 @@ export function TodoForm({ onAdd }: TodoFormProps) {
       <button
         type="submit"
         className="
+          shrink-0
           px-3 sm:px-5 py-2 sm:py-3
           bg-blue-600 text-white rounded-xl
           hover:bg-blue-700
