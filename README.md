@@ -3,7 +3,7 @@
 ![TodoList 라이트 모드 스크린샷](https://github.com/user-attachments/assets/2d443f6a-6d73-4427-bc5e-845583232263)
 ![TodoList 다크 모드 스크린샷](https://github.com/user-attachments/assets/83ff3201-4bda-4947-aa2e-48156de3a07c)
 
-오늘을 파란빛으로 기록하고, 내일의 성장을 이어가는 모던 할 일 관리 앱입니다. 🌊
+오늘을 파란빛으로 기록하고, 내일의 성장을 이어가는 모던 할 일 관리 앱입니다. 🌊  
 React와 TypeScript로 구축했으며, Zustand 상태 관리를 통해 가볍고 직관적인 경험을 제공합니다.
 
 ## 주요 기능
