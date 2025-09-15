@@ -5,8 +5,8 @@ import { TodoForm } from "./components/TodoForm";
 import { ProgressBar } from "./components/ProgressBar";
 import { TodoList } from "./components/TodoList";
 import { ContactFAB } from "./components/ContactFAB";
-import { useTodos } from "./hooks/useTodos";
 import { DEFAULT_USER_PROFILE } from "./constants/user";
+import { useTodosStore } from "./store/todoStore";
 
 function App() {
   // 오늘 날짜로 초기화 (시간 정보 제거하여 정확한 날짜 비교)
@@ -16,7 +16,7 @@ function App() {
     return today;
   });
   const { getTodosForDate, addTodo, toggleTodo, deleteTodo, editTodo } =
-    useTodos();
+    useTodosStore();
 
   const handleAddTodo = (text: string) => {
     addTodo(selectedDate, text);
@@ -62,15 +62,15 @@ function App() {
             />
 
             {/* 투두 작성 폼 - 진행도 바와 완전히 분리 */}
-            <TodoForm onAdd={handleAddTodo} />
+            <TodoForm onAdd={(text) => addTodo(selectedDate, text)} />
           </div>
 
           <div className="h-[400px] overflow-y-auto px-6 pb-6 scrollbar-thin">
             <TodoList
               todos={getTodosForDate(selectedDate)}
-              onToggle={handleToggleTodo}
-              onDelete={handleDeleteTodo}
-              onEdit={handleEditTodo}
+              onToggle={(id) => toggleTodo(selectedDate, id)}
+              onDelete={(id) => deleteTodo(selectedDate, id)}
+              onEdit={(id, text) => editTodo(selectedDate, id, text)}
             />
           </div>
         </div>
