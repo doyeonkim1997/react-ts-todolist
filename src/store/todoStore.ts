@@ -82,4 +82,3 @@ export const useTodoStore = create(
     { name: "todo-storage" }
   )
 );
-export const useTodosStore = useTodoStore; // 별칭 추가
