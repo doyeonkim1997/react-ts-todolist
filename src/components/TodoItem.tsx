@@ -47,11 +47,11 @@ export function TodoItem({ todo, onToggle, onDelete, onEdit }: TodoItemProps) {
 
   return (
     <div
-      className="flex items-center gap-3 p-4 
-                    bg-white dark:bg-slate-700
-                    rounded-xl shadow-sm 
-                    border border-gray-100 dark:border-slate-600
-                    transition-colors duration-300"
+      className="flex items-center gap-2 sm:gap-3 p-3 sm:p-4 
+               bg-white dark:bg-slate-700
+               rounded-xl shadow-sm 
+               border border-gray-100 dark:border-slate-600
+               transition-colors duration-300"
     >
       <div className="relative">
         <input
@@ -93,14 +93,14 @@ export function TodoItem({ todo, onToggle, onDelete, onEdit }: TodoItemProps) {
           value={editText}
           onChange={(e) => setEditText(e.target.value)}
           onKeyDown={handleKeyDown}
-          className="flex-1 px-2 py-1 border border-gray-200 rounded-md focus:outline-none focus:border-gray-400 bg-white"
+          className="flex-1 px-2 py-1 border border-gray-200 rounded-md focus:outline-none focus:border-gray-400 bg-white text-sm sm:text-base"
           autoFocus
           aria-label="할 일 수정"
         />
       ) : (
         // 일반 모드
         <span
-          className={`flex-1 ${
+          className={`flex-1 text-sm sm:text-base ${
             todo.completed
               ? "line-through text-gray-400 dark:text-gray-500"
               : "text-gray-800 dark:text-gray-100"
