@@ -144,8 +144,10 @@ export function DateSlider({ selectedDate, onDateSelect }: DateSliderProps) {
                 </span>
                 <span className="text-base sm:text-xl font-bold">
                   {date.getDate()}
+                  {isFuture && (
+                    <span className="text-[12px] sm:text-xs">🔒</span>
+                  )}
                 </span>
-                {isFuture && <span className="text-xs">🔒</span>}
               </button>
             );
           })}
