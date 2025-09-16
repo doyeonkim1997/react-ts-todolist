@@ -51,7 +51,7 @@ function App() {
         <div className="flex-1 flex justify-center items-start">
           <div
             className="
-            w-full max-w-sm sm:max-w-md md:max-w-lg mx-auto px-4
+            w-full max-w-xs sm:max-w-md md:max-w-lg mx-auto px-4
             bg-white dark:bg-slate-800
             rounded-2xl shadow-lg overflow-hidden
             transition-colors duration-300
