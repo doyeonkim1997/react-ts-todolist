@@ -26,6 +26,7 @@ export function TodoForm({ onAdd }: TodoFormProps) {
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
+        maxLength={15}
         placeholder="어떤 일을 하실 건가요? ✨"
         className="
           flex-1 min-w-0
