@@ -4,7 +4,6 @@ import { DateSlider } from "./components/DateSlider";
 import { TodoForm } from "./components/TodoForm";
 import { ProgressBar } from "./components/ProgressBar";
 import { TodoList } from "./components/TodoList";
-import { ContactFAB } from "./components/ContactFAB";
 import { DEFAULT_USER_PROFILE } from "./constants/user";
 import { useTodoStore } from "./store/todoStore";
 import DarkModeToggle from "./components/DarkModeToggled";
@@ -27,12 +26,12 @@ function App() {
 
   return (
     <div className={isDarkMode ? "dark" : ""}>
+      {/* 전체 배경. 배경은 항상 전체 화면을 채움*/}
       <div
         className="
         min-h-screen
         bg-gradient-to-br from-blue-50 to-indigo-100
         dark:from-gray-900 dark:to-gray-800
-        max-h-[70vh] sm:h-[600px] md:h-[500px]
         flex flex-col
       "
       >
@@ -52,11 +51,12 @@ function App() {
         <div className="flex-1 flex justify-center items-start">
           <div
             className="
-            w-full max-w-xl mx-4
+            w-full max-w-sm sm:max-w-md md:max-w-lg mx-auto px-4
             bg-white dark:bg-slate-800
             rounded-2xl shadow-lg overflow-hidden
             transition-colors duration-300
-             min-h-[350px] sm:min-h-[450px] md:min-h-[550px]
+            h-[420px] sm:h-[520px] md:h-[600px] 
+            max-h-[70vh]
             flex flex-col
           "
           >
@@ -88,11 +88,9 @@ function App() {
             </div>
           </div>
         </div>
-
-        {/* 하단 고정 */}
-        <div className="w-full max-w-xl mx-auto px-4 py-3 flex gap-2 justify-end flex-shrink-0">
+        {/* 투두 박스 바로 아래 다크모드 토글*/}
+        <div className="w-full max-w-xl mx-auto px-4 mt-3 flex justify-end">
           <DarkModeToggle />
-          <ContactFAB />
         </div>
       </div>
     </div>
