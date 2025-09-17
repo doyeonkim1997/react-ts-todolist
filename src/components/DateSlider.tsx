@@ -128,15 +128,17 @@ export function DateSlider({ selectedDate, onDateSelect }: DateSliderProps) {
         <div className="flex justify-center gap-2">
           {dates.map((date, index) => {
             const isFuture = date > today;
+            const inBeforeLimit = date < oneWeekAgo;
+            const isDisabled = isFuture || inBeforeLimit;
 
             return (
               <button
                 key={`${date.getTime()}-${index}`}
                 onClick={() => {
-                  if (!isFuture) onDateSelect(date);
+                  if (!isDisabled) onDateSelect(date);
                 }}
-                disabled={isFuture}
-                className={getDateButtonStyle(date, isFuture)}
+                disabled={isDisabled}
+                className={getDateButtonStyle(date, isDisabled)}
                 aria-label={`${date.getMonth() + 1}월 ${date.getDate()}일 선택`}
               >
                 <span className="text-[10px] sm:text-xs font-medium mt-1 sm:mt-0">
