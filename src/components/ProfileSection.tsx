@@ -8,7 +8,7 @@ export function ProfileSection({
   nickname,
 }: ProfileSectionProps) {
   return (
-    <div className="flex flex-col items-center mb-4 sm:mb-8">
+    <div className="flex flex-col items-center  mt-6 mb-4  sm:mt-8 sm:mb-8">
       <div className="w-14 h-14 sm:w-20 sm:h-20 rounded-full overflow-hidden mb-2 sm:mb-4 shadow-lg">
         {profileImage ? (
           <img
